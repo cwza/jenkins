@@ -1,0 +1,11 @@
+version: '2'
+services:
+  jenkins:
+    restart: always
+    build: .
+    image: meepshop_jenkins
+    ports:
+     - "8080:8080"
+     - "50000:50000"
+    volumes:
+     - ~/cwz/develop/docker/jenkins/:/var/jenkins_home
